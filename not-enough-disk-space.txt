@@ -1,0 +1,1 @@
+The upgrade needs a total of 754 M free space on disk '/'. Please free at least an additional 2,640 k of disk space on '/'. Empty your trash and remove temporary packages of former installations using 'sudo apt clean'.
