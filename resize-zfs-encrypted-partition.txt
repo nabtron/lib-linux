@@ -1,0 +1,10 @@
+resize zfs encrypted partition in ubuntu 20.10
+
+Extend the logical partition (2) to hold the extended partitions, to the end of the disk (-1):
+
+(parted) resizepart 2 -1
+Resize logical partition 5, keeping space for the swap partition (parted will complain again, just go on and (i)gnore:
+
+(parted) resizepart 5 -4G
+
+https://unix.stackexchange.com/questions/320957/extend-a-luks-encrypted-partition-to-fill-disk
