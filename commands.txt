@@ -1,0 +1,5 @@
+to list all folders in current directory with -h size
+du -h --max-depth=1
+
+search files on server with name / part of name
+find . -name '*.ear' -exec ls -lh {} \;
