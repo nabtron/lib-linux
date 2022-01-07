@@ -1,0 +1,11 @@
+# list all mounted folders / disks
+df -h
+
+# list all zfs snapshots
+zfs list -t snapshot
+
+#delete all zfs snapshots
+zfs list -H -o name -t snapshot | xargs -n1 sudo zfs destroy
+
+# delete specific snapshot
+sudo zfs destroy rpool/USERDATA/MHT@FRIDAY09-03-21
