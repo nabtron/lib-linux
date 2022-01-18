@@ -12,4 +12,5 @@ systemctl restart sshd
 4. check if daemon is listening to new port to confirm
 netstat -tulpn | grep ssh
 
-// make sure that the port is not in use already
+// make sure that the port is not in use already otherwise error can happen:
+kex_exchange_identification: read: Connection reset by peer
