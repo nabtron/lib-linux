@@ -1,0 +1,15 @@
+// change terminal ssh port from 22 to any:
+
+1. check the current port:
+grep -i port /etc/ssh/sshd_config
+
+2. edit the file, uncomment the #Port 22 line and change port to any
+nano /etc/ssh/sshd_config
+
+3. restart the ssh server
+systemctl restart sshd
+
+4. check if daemon is listening to new port to confirm
+netstat -tulpn | grep ssh
+
+// make sure that the port is not in use already
