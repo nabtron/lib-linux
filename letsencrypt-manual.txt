@@ -1,0 +1,16 @@
+sudo certbot -d domain.com,www.domain.com --manual --preferred-challenges dns certonly
+
+then add the txt record in dns
+
+then enter
+
+once created, copy the files to /home/user/ (not inside public_html) folder. 
+
+you may have to change permission for privkey to 644
+
+goto virtualmin, update certificate & key and done.
+
+manual renewal though. 
+
+for auto renew: 
+- This certificate will not be renewed automatically. Autorenewal of --manual certificates requires the use of an authentication hook script (--manual-auth-hook) but one was not provided. To renew this certificate, repeat this same certbot command before the certificate's expiry date.
